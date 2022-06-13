@@ -54,8 +54,6 @@ app.listen(3000, () => {
 
 
  app.post("/images", upload.array("demo_images", 6), (req, res) =>{
-    console.log(req.files)
-    console.log('-------------')
     try {
       res.send(req.files);
     } catch (error) {
